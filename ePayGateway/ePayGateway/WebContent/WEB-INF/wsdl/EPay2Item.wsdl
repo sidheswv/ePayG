@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:impl="http://epay2.tcs.timeinc.com" xmlns:intf="http://epay2.tcs.timeinc.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://epay2.tcs.timeinc.com">
+ <wsdl:types>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://epay2.tcs.timeinc.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <element name="requestAuthorizationResponse">
+    <complexType>
+     <sequence>
+      <element name="requestAuthorizationReturn" nillable="true" type="impl:EPay2DTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="requestAuthorization">
+    <complexType>
+     <sequence>
+      <element name="tranRequestType" nillable="true" type="xsd:string"/>
+      <element name="presenterId" nillable="true" type="xsd:string"/>
+      <element name="clientId" nillable="true" type="xsd:string"/>
+      <element name="refId" nillable="true" type="xsd:string"/>
+      <element name="firstName" nillable="true" type="xsd:string"/>
+      <element name="lastName" nillable="true" type="xsd:string"/>
+      <element name="address1" nillable="true" type="xsd:string"/>
+      <element name="address2" nillable="true" type="xsd:string"/>
+      <element name="city" nillable="true" type="xsd:string"/>
+      <element name="state" nillable="true" type="xsd:string"/>
+      <element name="postalCode" nillable="true" type="xsd:string"/>
+      <element name="plus4Zip" nillable="true" type="xsd:string"/>
+      <element name="countryCode" nillable="true" type="xsd:string"/>
+      <element name="epvType" nillable="true" type="xsd:string"/>
+      <element name="accountNumber" nillable="true" type="xsd:string"/>
+      <element name="ccExp" nillable="true" type="xsd:string"/>
+      <element name="ccSecurityCode" nillable="true" type="xsd:string"/>
+      <element name="bankRoutingNumber" nillable="true" type="xsd:string"/>
+      <element name="bankAccountType" nillable="true" type="xsd:string"/>
+      <element name="currencyCode" nillable="true" type="xsd:string"/>
+      <element name="tranAmount" nillable="true" type="xsd:string"/>
+      <element name="salesTax" nillable="true" type="xsd:string"/>
+      <element name="descriptor" nillable="true" type="xsd:string"/>
+      <element name="descriptorCityPhone" nillable="true" type="xsd:string"/>
+      <element name="clientPassThrough" nillable="true" type="xsd:string"/>
+      <element name="clientTranId" nillable="true" type="xsd:string"/>
+      <element name="rvrslTCSTranId" nillable="true" type="xsd:string"/>
+      <element name="rvrslTranDate" nillable="true" type="xsd:string"/>
+      <element name="rvrslAuthCode" nillable="true" type="xsd:string"/>
+      <element name="encryptionFlag" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="EPay2DTO">
+    <sequence>
+     <element name="presenterId" nillable="true" type="xsd:string"/>
+     <element name="clientId" nillable="true" type="xsd:string"/>
+     <element name="refId" nillable="true" type="xsd:string"/>
+     <element name="tranRequestType" nillable="true" type="xsd:string"/>
+     <element name="tranDate" nillable="true" type="xsd:string"/>
+     <element name="accountNumberLast4" nillable="true" type="xsd:string"/>
+     <element name="clientTranId" nillable="true" type="xsd:string"/>
+     <element name="authNumber" nillable="true" type="xsd:string"/>
+     <element name="responseCode" nillable="true" type="xsd:string"/>
+     <element name="avsResponse" nillable="true" type="xsd:string"/>
+     <element name="csvResponse" nillable="true" type="xsd:string"/>
+     <element name="tcsTranId" nillable="true" type="xsd:string"/>
+     <element name="clientPassThrough" nillable="true" type="xsd:string"/>
+     <element name="tranResponseType" nillable="true" type="xsd:string"/>
+     <element name="tranAmount" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="requestAuthorizationResponse">
+     <wsdl:part element="intf:requestAuthorizationResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="requestAuthorizationRequest">
+     <wsdl:part element="intf:requestAuthorization" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="EPay2Item">
+     <wsdl:operation name="requestAuthorization">
+       <wsdl:input message="intf:requestAuthorizationRequest" name="requestAuthorizationRequest"/>
+
+       <wsdl:output message="intf:requestAuthorizationResponse" name="requestAuthorizationResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="EPay2ItemSoapBinding" type="intf:EPay2Item">
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="requestAuthorization">
+       <wsdlsoap:operation soapAction="requestAuthorization"/>
+
+       <wsdl:input name="requestAuthorizationRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="requestAuthorizationResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="EPay2ItemService">
+     <wsdl:port binding="intf:EPay2ItemSoapBinding" name="EPay2Item">
+       <wsdlsoap:address location="http://localhost:9080/EPay2App/services/EPay2Item"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

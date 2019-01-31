@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java-wsdl-mapping xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd">
+    <package-mapping>
+        <package-type>com.timeinc.tcs.epay2</package-type>
+        <namespaceURI>http://epay2.tcs.timeinc.com</namespaceURI>
+    </package-mapping>
+    <java-xml-type-mapping>
+        <java-type>com.timeinc.tcs.epay2.EPay2DTO</java-type>
+        <root-type-qname xmlns:rtq="http://epay2.tcs.timeinc.com">rtq:EPay2DTO</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>presenterId</java-variable-name>
+            <xml-element-name>presenterId</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>clientId</java-variable-name>
+            <xml-element-name>clientId</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>refId</java-variable-name>
+            <xml-element-name>refId</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>tranRequestType</java-variable-name>
+            <xml-element-name>tranRequestType</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>tranDate</java-variable-name>
+            <xml-element-name>tranDate</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>accountNumberLast4</java-variable-name>
+            <xml-element-name>accountNumberLast4</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>clientTranId</java-variable-name>
+            <xml-element-name>clientTranId</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>authNumber</java-variable-name>
+            <xml-element-name>authNumber</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>responseCode</java-variable-name>
+            <xml-element-name>responseCode</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>avsResponse</java-variable-name>
+            <xml-element-name>avsResponse</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>csvResponse</java-variable-name>
+            <xml-element-name>csvResponse</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>tcsTranId</java-variable-name>
+            <xml-element-name>tcsTranId</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>clientPassThrough</java-variable-name>
+            <xml-element-name>clientPassThrough</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>tranResponseType</java-variable-name>
+            <xml-element-name>tranResponseType</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>tranAmount</java-variable-name>
+            <xml-element-name>tranAmount</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>java.lang.String</java-type>
+        <root-type-qname xmlns:rtq="http://www.w3.org/2001/XMLSchema">rtq:string</root-type-qname>
+        <qname-scope>simpleType</qname-scope>
+    </java-xml-type-mapping>
+    <service-interface-mapping>
+        <service-interface>com.timeinc.tcs.epay2.EPay2ItemService</service-interface>
+        <wsdl-service-name xmlns:sim="http://epay2.tcs.timeinc.com">sim:EPay2ItemService</wsdl-service-name>
+        <port-mapping>
+            <port-name>EPay2Item</port-name>
+            <java-port-name>EPay2Item</java-port-name>
+        </port-mapping>
+    </service-interface-mapping>
+    <service-endpoint-interface-mapping>
+        <service-endpoint-interface>com.timeinc.tcs.epay2.EPay2Item</service-endpoint-interface>
+        <wsdl-port-type xmlns:seimwpt="http://epay2.tcs.timeinc.com">seimwpt:EPay2Item</wsdl-port-type>
+        <wsdl-binding xmlns:seimwb="http://epay2.tcs.timeinc.com">seimwb:EPay2ItemSoapBinding</wsdl-binding>
+        <service-endpoint-method-mapping>
+            <java-method-name>requestAuthorization</java-method-name>
+            <wsdl-operation>requestAuthorization</wsdl-operation>
+            <wrapped-element/>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>tranRequestType</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>1</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>presenterId</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>2</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>clientId</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>3</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>refId</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>4</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>firstName</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>5</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>lastName</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>6</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>address1</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>7</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>address2</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>8</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>city</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>9</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>state</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>10</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>postalCode</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>11</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>plus4Zip</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>12</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>countryCode</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>13</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>epvType</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>14</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>accountNumber</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>15</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>ccExp</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>16</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>ccSecurityCode</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>17</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>bankRoutingNumber</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>18</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>bankAccountType</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>19</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>currencyCode</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>20</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>tranAmount</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>21</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>salesTax</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>22</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>descriptor</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>23</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>descriptorCityPhone</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>24</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>clientPassThrough</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>25</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>clientTranId</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>26</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>rvrslTCSTranId</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>27</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>rvrslTranDate</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>28</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>rvrslAuthCode</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <method-param-parts-mapping>
+                <param-position>29</param-position>
+                <param-type>java.lang.String</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:mppm="http://epay2.tcs.timeinc.com">mppm:requestAuthorizationRequest</wsdl-message>
+                    <wsdl-message-part-name>encryptionFlag</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>com.timeinc.tcs.epay2.EPay2DTO</method-return-value>
+                <wsdl-message xmlns:wrvm="http://epay2.tcs.timeinc.com">wrvm:requestAuthorizationResponse</wsdl-message>
+                <wsdl-message-part-name>requestAuthorizationReturn</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+    </service-endpoint-interface-mapping>
+</java-wsdl-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ePayGateway">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="guava-15.0-rc1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/guava-15.0-rc1/guava-15.0-rc1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsr311-api.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jsr311-api/jsr311-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpclient-osgi-4.3.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/httpclient-osgi-4.3/httpclient-osgi-4.3">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="quartz-jobs-2.2.2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/quartz-jobs-2.2.2/quartz-jobs-2.2.2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="quartz-2.2.2.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/quartz-2.2.2/quartz-2.2.2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ibm-wink-jaxrs.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/ibm-wink-jaxrs/ibm-wink-jaxrs">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bcprov-jdk15on-157.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/bcprov-jdk15on-157/bcprov-jdk15on-157">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="ePayGateway"/>
+        <property name="java-output-path" value="/ePayGateway/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-bnd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://websphere.ibm.com/xml/ns/javaee"
+    xsi:schemaLocation="http://websphere.ibm.com/xml/ns/javaee http://websphere.ibm.com/xml/ns/javaee/ibm-web-bnd_1_0.xsd" version="1.0">
+  <virtual-host name="default_host"/>
+  <resource-ref name="jdbc/epayGDB" binding-name="jdbc/epayG"/>
+  <resource-ref name="jdbc/wes" binding-name="jdbc/wes"/>
+  <resource-ref name="jdbc/wesDB" binding-name="jdbc/wes"/>
+  <resource-env-ref name="jms/wesQCF" binding-name="jms/wesQCF"/>
+  <resource-env-ref name="jms/QCF" binding-name="jms/wesQCF"/>
+</web-bnd>
+

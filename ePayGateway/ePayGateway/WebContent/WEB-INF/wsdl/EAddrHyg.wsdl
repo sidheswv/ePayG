@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:impl="http://addr.tcs.timeinc.com" xmlns:intf="http://addr.tcs.timeinc.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://addr.tcs.timeinc.com">
+ <wsdl:types>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://addr.tcs.timeinc.com">
+   <element name="requestCleansingResponse">
+    <complexType>
+     <sequence>
+      <element name="requestCleansingReturn" nillable="true" type="impl:EAddrDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="requestCleansing">
+    <complexType>
+     <sequence>
+      <element name="clientId" nillable="true" type="xsd:string"/>
+      <element name="address1" nillable="true" type="xsd:string"/>
+      <element name="address2" nillable="true" type="xsd:string"/>
+      <element name="city" nillable="true" type="xsd:string"/>
+      <element name="state" nillable="true" type="xsd:string"/>
+      <element name="zipcode" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="EAddrDTO">
+    <sequence>
+     <element name="inputAddr1" nillable="true" type="xsd:string"/>
+     <element name="inputAddr2" nillable="true" type="xsd:string"/>
+     <element name="inputCity" nillable="true" type="xsd:string"/>
+     <element name="inputState" nillable="true" type="xsd:string"/>
+     <element name="inputZip" nillable="true" type="xsd:string"/>
+     <element name="outputAddr1" nillable="true" type="xsd:string"/>
+     <element name="outputAddr2" nillable="true" type="xsd:string"/>
+     <element name="outputCity" nillable="true" type="xsd:string"/>
+     <element name="outputState" nillable="true" type="xsd:string"/>
+     <element name="outputZip" nillable="true" type="xsd:string"/>
+     <element name="zipPlus" nillable="true" type="xsd:string"/>
+     <element name="deliveryPoint" nillable="true" type="xsd:string"/>
+     <element name="codeDPV" nillable="true" type="xsd:string"/>
+     <element name="carrierRoute" nillable="true" type="xsd:string"/>
+     <element name="lineOfTravel" nillable="true" type="xsd:string"/>
+     <element name="altSeqLOT" nillable="true" type="xsd:string"/>
+     <element name="directionalResCode" nillable="true" type="xsd:string"/>
+     <element name="generalResCode" nillable="true" type="xsd:string"/>
+     <element name="suffixResCode" nillable="true" type="xsd:string"/>
+     <element name="apartmentResCode" nillable="true" type="xsd:string"/>
+     <element name="lacsResCode" nillable="true" type="xsd:string"/>
+     <element name="dpvFPCode" nillable="true" type="xsd:string"/>
+     <element name="responseCode" nillable="true" type="xsd:string"/>
+     <element name="responseMessage" nillable="true" type="xsd:string"/>
+     <element name="clientId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="requestCleansingRequest">
+     <wsdl:part element="intf:requestCleansing" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="requestCleansingResponse">
+     <wsdl:part element="intf:requestCleansingResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="EAddrHyg">
+     <wsdl:operation name="requestCleansing">
+       <wsdl:input message="intf:requestCleansingRequest" name="requestCleansingRequest"/>
+
+       <wsdl:output message="intf:requestCleansingResponse" name="requestCleansingResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="EAddrHygSoapBinding" type="intf:EAddrHyg">
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="requestCleansing">
+       <wsdlsoap:operation soapAction="requestCleansing"/>
+
+       <wsdl:input name="requestCleansingRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="requestCleansingResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="EAddrHygService">
+     <wsdl:port binding="intf:EAddrHygSoapBinding" name="EAddrHyg">
+       <wsdlsoap:address location="http://wstc3:9080/EAddressApp/services/EAddrHyg"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

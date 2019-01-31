@@ -1,0 +1,847 @@
+/* Default Style */
+
+/* Base structure */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Move down content because we have a fixed navbar that is 90px tall */
+body {
+  padding-top: 80px;
+  margin-bottom: 200px;
+}
+
+label{
+ 	width:85px;
+    clear:left;
+    text-align:left;
+    padding-right:10px;
+    font-weight: normal;
+}
+
+.address{
+	font-size: 16px;
+}
+
+.payment{
+	padding: 5px;
+}
+
+.submitButton{
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	border: black;
+}
+
+@media (max-width: 991px) {
+	body {
+		margin-bottom: 300px;
+	}
+}
+	
+@media (max-width: 768px) {
+	body {
+		margin-bottom: 450px;
+	}
+} 
+	
+/* Main Links */
+a {
+  color: #000000;
+  font-weight: bold;  
+  text-decoration: none;
+}
+
+
+a:hover,
+a:focus {
+  color: #000000;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.logo {
+  width: 300px;
+  height: 69px;
+  background-image: url('/ePayG/images/logo_IBSTORE.png');
+  background-repeat: no-repeat;
+  float: left;
+  position: relative;
+  left: 0px;
+  padding-left: 5px; 
+  top: 10px;
+}
+
+.banner-text {
+  color:#fff;
+  float: left;
+  position: relative;
+  font-family: "Helvetica Nue", Helvetica, sans-serif;
+  line-height: 140%;
+  width: auto;
+  text-align: left;
+  left: 5px;
+  top: 10px;
+}
+
+.navbar-header > .logo {
+  left: 15px;
+}
+
+.navbar-header > .banner-text {
+  left: 20px;
+}
+
+.banner-text-sm {
+  font-size: 120%;
+}
+
+.banner-text-lg {
+  font-size: 160%;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+	.navbar-header {
+		width: 90%;
+	}
+	
+	.logo {
+	  width: 300px;
+	  height: 69px;
+	  background-image: url('/ePayG/images/logo_IBSTORE.png');
+	  background-repeat: no-repeat;
+	  float: left;
+	  position: relative;
+	  left: 15px; 
+	  top: 10px;
+	}
+
+	.banner-text {
+	  color:#fff;
+	  float: left;
+	  position: relative;
+	  font-family: "Helvetica Nue", Helvetica, sans-serif;
+	  line-height: 140%;
+	  width: 80%;
+	  text-align: center;
+	  top: 22px;
+	}	
+	
+	.payDetails {
+      position: relative;
+  	}
+
+ 	 .bottom-align-image {
+ 	  position: absolute;
+  	  bottom: 0;
+  	  left: 350px;
+  	}
+}
+
+@media (max-width: 480px) {
+	.banner-text-sm {
+	  font-size: 100%;
+	}
+	
+	.banner-text-lg {
+	  font-size: 133%;
+	  font-weight: bold;
+	}
+}
+
+/* navbar Overrides */
+.navbar-inverse {
+  background-color: #FFFFFF; // nav background
+  border-color: #8e8e8e;
+  border-bottom: 1px #CCC solid;
+  height: 95px;
+}
+.navbar-inverse .navbar-brand {
+  color: #FFF;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #FFF;
+  background-color: transparent;
+  font-size: 26px;
+}
+
+/* Layout Columns */
+.layout-col-1, .layout-col-3 {
+    display: block;
+    padding: 20px;
+}
+
+.layout-col-2 {
+    display: block;
+    padding: 20px 10px;
+}
+
+/* Footer */
+
+.footer {
+  background: #8e8e8e;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}	
+
+.footer-links {
+	color: #FFFFFF;
+	text-align: left;
+	padding: 10px 0px;
+	font-size: 11px;
+	letter-spacing: 0.10rem;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Nimbus Sans L",sans-serif;
+	font-weight: 400;
+	line-height: 1.7rem;	
+}
+
+.footer-links-title {
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 3rem;	
+}
+
+.footer > div > .footer-links > span > a {
+	color: #FFFFFF;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.footer > div > .footer-links > span > a:hover {
+	color: #FFFFFF;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+.footer-spacer {
+	height: 25px;
+}
+
+.footer-logo {
+	color: #FFFFFF;
+	font-size: 11px;
+	line-height: 1.5rem;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Nimbus Sans L",sans-serif;
+	letter-spacing: 0.10rem;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 15px;
+}
+
+.footer-social {
+	padding-bottom: 15px;
+}
+
+/* Digital Guide */
+
+.device { }
+
+.device .title {
+	background: transparent;
+	padding-bottom: 5px;
+	color: #e90606;
+	font-weight: bold;
+}
+
+.device .content {
+	border: 0;
+	font-size: 12px;
+}
+
+.device .line {	
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+
+/* Logout */
+
+.btn-logout {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #f00f00; /* also update .btn-logout:active */
+  border-color: #f00f00;
+}
+
+.btn-logout:hover,
+.btn-logout:focus,
+.btn-logout:active,
+.btn-logout.active,
+.open .dropdown-toggle.btn-logout {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #cc341c;
+  border-color: #cc341c;
+}
+
+.btn-logout:active,
+.btn-logout.active,
+.open .dropdown-toggle.btn-logout {
+  background-image: none;
+  background-color: #f00f00;
+}
+
+.logout {
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+/* Panels */
+
+.panel-body {
+  padding: 7px 7px 7px 60px;
+}
+
+.panel-body > a,
+.panel-body > p > a {
+  font-size: 12px;
+}
+
+.panel-heading {
+  background: #000;
+  padding: 5px;
+  color: #fff;
+}
+
+.panel-title {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.panel-links {
+  background: transparent;
+  border: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+.panel-links > .panel-heading {
+  background: #fff;
+  padding: 0px;
+}
+
+.panel-links > .panel-heading > .panel-title {
+  color: #000000;
+  font-weight: bold;
+  padding: 3px;
+  border-bottom: 1px solid #000;
+  text-align: left;
+}
+
+.panel-links > .panel-body {
+	padding: 3px;
+}
+
+.panel-links > .panel-body > a,
+.panel-links > .panel-body > p > a {
+	font-size: 13px;
+	color: #f00f00;
+}
+
+.panel-links > .panel-body > a:hover,
+.panel-links > .panel-body > p > a:hover {
+	color: #cc341c;
+	text-decoration: none;
+}
+
+.panel-login {
+  width: 100%;
+  margin: 100px auto 25px auto;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.panel-login > .panel-heading {
+  margin: 0px auto;
+  padding: 10px 0px;
+  background: #f00f00;	
+}
+
+.panel-login > .panel-heading > .panel-title {
+  font-size: 18px;
+  color: #fff;
+}
+
+.panel-page-header {
+  color: #000000;
+  font-weight: bold;
+  margin: 0px;
+  border-bottom: 1px solid #000;
+  text-align: left;
+}
+	
+.panel-title2 {
+	font-size: 115%;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 3px;
+	margin-bottom: 1px;
+}
+	
+.panel-login > .panel-body {
+  margin: 10px;
+}
+
+.panel-login > .panel-body > .row {
+	margin: 5px;
+}
+
+.panel-login > .panel-body > .row > a {
+	font-size: 12px;
+}
+
+.panel-login > .panel-body > .instructions {
+	padding-bottom: 10px;
+}
+
+.panel-login > .panel-footer {
+	padding: 0px;
+	color: #000;
+	font-size: 13px;
+}
+
+.panel-login > .panel-footer > .row > div > a {
+	color: #000;
+}
+
+.panel-footer-links {
+	vertical-align: middle;
+	padding: 10px 0px;
+	width: 50%;
+}
+
+.panel-footer-links > a {
+	color: #000000;
+}
+
+.footer-links-border-right {
+	border-right: 1px solid #ccc;
+}
+
+.panel-login-links {
+  margin-top: 75px;
+  margin-bottom: 40px;
+}
+
+.panel-main {
+  border: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+.panel-main > .panel-heading {
+  background: #fff;
+  padding: 0px;
+}
+
+.panel-main > .panel-heading > .panel-title {
+  color: #000;
+  font-weight: bold;
+  padding: 3px;
+  border-bottom: 1px solid #000;
+  text-align: left;
+}
+
+.panel-main > .panel-body {
+	padding: 5px 3px;
+}
+
+.panel-single {
+  background: transparent;
+  border: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0);	
+}
+
+.panel-single > .panel-heading {
+  background: #fff;
+  padding: 0px;
+}
+
+.panel-single > .panel-heading > h3 {
+  font-size: 16px;
+}
+
+.panel-single > .panel-heading > .panel-title {
+  color: #000;
+  font-weight: bold;
+  padding: 3px;
+  border-bottom: 1px solid #000;
+  text-align: left;
+}
+
+.panel-single > .panel-body {
+  margin: 15px;
+}
+
+.instructions {
+  margin-bottom: 10px;
+  font-weight: bold;
+} 
+
+.row-skip-1 {
+  margin-top: 20px;
+}
+
+.row-skip-2 {
+  margin-top: 40px;
+}
+
+.row-skip-3 {
+  margin-top: 60px;
+}
+
+.row-field { 
+  padding: 1px 0px; 
+}
+
+/* FAQ */
+.faq-category {
+  text-align: left;
+  padding-bottom: 2px; 
+  margin-bottom: 7px; 
+  border-bottom: 1px solid #ccc;	
+}
+	
+.faq-answer {
+  padding: 2px 10px;
+}
+
+.faq-subanswer {
+  padding: 2px 15px;
+  color: #6b6b6b;
+}
+	
+.faq-return {
+  padding: 10px;
+}
+		
+.faq-return > a {
+  font-size: 13px;
+}
+
+.faq-question {
+  font-weight:bold;
+}
+	
+.faq-subquestion {
+  color: #606060;
+  font-weight: bold;
+}
+
+.faq-office {
+  padding: 2px 15px;
+}
+	
+.faq-office-region {
+  color: #7f7f7f;
+  font-weight: bold;
+}
+
+table.back-issue-rates {
+	border: solid 1px #7f7f7f;
+}
+	
+table.back-issue-rates tr {
+	border: solid 1px #7f7f7f;
+}
+
+table.back-issue-rates td {
+	padding: 5px 7px;
+	border: solid 1px #7f7f7f;
+}
+	
+.rates-title { background: #e5e5e5; }
+
+/* Misc */
+
+.bold {font-weight: bold;}
+
+.center {text-align: center;}
+
+.middle {vertical-align: middle;}
+
+.cover-image {
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+}
+
+.social {
+	text-align: center;
+}
+
+.no-left-space {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.no-right-space {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+ 
+.font-13 {
+  font-size: 13px;
+}
+ 
+.font-11 {
+  font-size: 11px;
+}
+ 
+.gray-dark-1 {
+  color: #666666;
+}
+ 
+.gray-dark-2 {
+  color: #7f7f7f;
+}
+
+.font-12 > a {
+  font-size: 12px;
+}
+
+/* This is used to pad the html anchors in the faq page to adjust for the fixed header. */
+.anchor{
+  display: block;
+  height: 90px; /*same height as header*/
+  margin-top: -90px; /*same height as header*/
+  visibility: hidden;
+}
+
+.johnson-box {
+	font-size: 13px;
+}	
+
+.johnson-box-head-xs {
+  background: #ECECEC;
+  padding: 5px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}	
+
+.johnson-box > thead {
+	background: #ECECEC;
+}
+
+.johnson-box > thead > tr > th,
+.johnson-box > tbody > tr > th,
+.johnson-box > tfoot > tr > th,
+.johnson-box > thead > tr > td,
+.johnson-box > tbody > tr > td,
+.johnson-box > tfoot > tr > td {
+  padding: 5px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.card-on-file > thead > tr > th,
+.card-on-file > tbody > tr > th,
+.card-on-file > tfoot > tr > th,
+.card-on-file > thead > tr > td,
+.card-on-file > tbody > tr > td,
+.card-on-file > tfoot > tr > td {
+  padding: 2px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+
+.bold { 
+	font-weight: bold;
+}
+
+.tcs-footer-legal {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 12px;
+}
+
+.mcaAddress {
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+	
+.newAcctNum {
+  color: #CC0000;
+  padding-left: 10px;
+}
+
+.contact-info a,
+.payment-info a {
+	font-size: 13px;
+}
+
+/* Custom Buttons */
+.btn-custom {
+  background-color: #f00f00;
+  background-image: -webkit-linear-gradient(top, #f00f00 0%, #f00f00 100%);
+  background-image: linear-gradient(to bottom, #f00f00 0%, #f00f00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #f00f00;
+  color: #ffffff;
+  font-weight: bold;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+  background-color: #cc341c;
+  background-image: -webkit-linear-gradient(top, #cc341c 0%, #cc341c 100%);
+  background-image: linear-gradient(to bottom, #cc341c 0%, #cc341c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #cc341c;
+  color: #ffffff;
+  font-weight: bold;
+  
+  background-position: 0 -15px;
+}
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #cc341c;
+  border-color: #cc341c;
+  color: #ffffff;
+}
+
+/* Custom Badges */
+.badge-square {
+  background-color: #AB0000;
+  border-radius: 0px;
+}
+.badge-h4 {
+  position: relative;
+  bottom: 2px;
+}
+
+.badge-best-deal {
+  background-color: #AB0000;
+  border-radius: 0px;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.renew-title {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 290%;
+	font-weight: 900;
+	text-shadow: 1px 0 #888888;	
+	margin-top: 20px; 
+	margin-bottom: 20px;	
+	line-height: 95%;
+}
+
+.renew-title-color1 {
+	color: #7CA6CF;
+}
+
+.renew-title-color2 {
+	color: #000047;
+}
+
+.account-box {
+	border: 2px solid gray;
+	padding: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 115%;
+	line-height: 115%;
+	min-width: 250px;
+}
+
+.badge-renewal-margin {
+	margin-bottom: 12px;
+}
+
+.badge-renewal-text {
+  font-size: 140%;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: normal;
+} 
+@media screen and (max-width: 600px) {
+    .badge-renewal-text {
+		font-size: 120%;
+    }       
+}
+
+.badge-renewal-common { 
+  padding-top: 12px;  
+  padding-bottom: 11px;  
+  border-radius: 0px;        
+}
+
+.badge1-renewal {
+	background-color: #AB0000; 
+	text-align: center;  
+}
+
+.badge2-renewal { 
+  background-color: #8d8d8d;;    
+  text-align: left;
+  padding-left: 15px;
+}
+
+.btn-style-renewal-submit { 
+    background: -moz-linear-gradient(top,  #CD6666, #C44D4D, #BC3333, #B31919, #AB0000); /* FF3.6+ */ 
+    background: -webkit-linear-gradient(top,  #CD6666, #C44D4D, #BC3333, #B31919, #AB0000); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top,  #CD6666, #C44D4D, #BC3333, #B31919, #AB0000); /* IE10+ */
+    background: linear-gradient(to bottom,  #CD6666, #C44D4D, #BC3333, #B31919, #AB0000); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CD6666', endColorstr='#AB0000',GradientType=0 ); /* IE6-9 */        
+	color: #FAFAFA;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:	140%;
+	font-weight: 800;	
+	border-radius: 12px;	
+	padding: 12px;		
+	padding-right: 35px;
+}
+
+.btn-style-renewal-submit:hover, .btn-style-renewal-submit:focus {
+	color: #FAFAFA;
+}
+
+.btn.disabled:active, .btn[disabled]:active,
+.btn.disabled.active, .btn[disabled].active {
+  color: inherit; 
+}
+
+.submit-button-play {
+	position: relative;
+	left: 7px;
+}
+
+.brand-name {
+	font-style: italic
+}
+
+.return-top {
+	text-align: left;
+	margin: 0px;
+	padding:0px;
+	padding-top: 3px;
+}
